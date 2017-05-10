@@ -39,6 +39,7 @@ WORKDIR ${WORK_DIR}
 RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y \
   build-essential \
   clang-3.8 \
+  libxml2 \
   git \
   libpython2.7 \
   libicu-dev \
