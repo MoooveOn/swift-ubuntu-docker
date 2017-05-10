@@ -28,17 +28,17 @@ RUNTIME_SNAPSHOT=$(grep "$prefix" swift-runtime/Dockerfile)
 RUNTIME_SNAPSHOT=${RUNTIME_SNAPSHOT//"$prefix"}
 RUNTIME_VERSION=${RUNTIME_SNAPSHOT//"$suffix"}
 
-docker build --pull -t ibmcom/ubuntu:14.04 ./ubuntu
-docker build -t ibmcom/swift-ubuntu:latest ./swift-development
-docker build -t ibmcom/swift-ubuntu-runtime:latest ./swift-runtime
-docker tag ibmcom/swift-ubuntu:latest ibmcom/swift-ubuntu:$DEVELOPMENT_VERSION
-docker tag ibmcom/swift-ubuntu-runtime:latest ibmcom/swift-ubuntu-runtime:$RUNTIME_VERSION
+docker build --pull -t ibmcom/ubuntu:16.04 ./ubuntu
+docker build -t ibmcom/swift-ubuntu1604:latest ./swift-development
+docker build -t ibmcom/swift-ubuntu1604-runtime:latest ./swift-runtime
+docker tag ibmcom/swift-ubuntu1604:latest ibmcom/swift-ubuntu:$DEVELOPMENT_VERSION
+docker tag ibmcom/swift-ubuntu1604-runtime:latest ibmcom/swift-ubuntu-runtime:$RUNTIME_VERSION
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
   docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD";
-  docker push ibmcom/ubuntu:14.04;
-  docker push ibmcom/swift-ubuntu:latest;
-  docker push ibmcom/swift-ubuntu-runtime:latest;
-  docker push ibmcom/swift-ubuntu:$DEVELOPMENT_VERSION;
-  docker push ibmcom/swift-ubuntu-runtime:$RUNTIME_VERSION;
+  docker push ibmcom/ubuntu:16.04;
+  docker push ibmcom/swift-ubuntu1604:latest;
+  docker push ibmcom/swift-ubuntu1604-runtime:latest;
+  docker push ibmcom/swift-ubuntu1604:$DEVELOPMENT_VERSION;
+  docker push ibmcom/swift-ubuntu1604-runtime:$RUNTIME_VERSION;
 fi

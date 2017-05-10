@@ -17,17 +17,17 @@
 # Dockerfile to build a Docker image with the Swift tools and binaries and
 # its dependencies.
 
-FROM ibmcom/ubuntu:14.04
+FROM ibmcom/ubuntu:16.04
 MAINTAINER IBM Swift Engineering at IBM Cloud
-LABEL Description="Linux Ubuntu 14.04 image with the Swift binaries and tools."
+LABEL Description="Linux Ubuntu 16.04 image with the Swift binaries and tools."
 
 USER root
 
 # Set environment variables for image
 ENV SWIFT_SNAPSHOT swift-3.1.1-RELEASE
 ENV SWIFT_SNAPSHOT_LOWERCASE swift-3.1.1-release
-ENV UBUNTU_VERSION ubuntu14.04
-ENV UBUNTU_VERSION_NO_DOTS ubuntu1404
+ENV UBUNTU_VERSION ubuntu16.04
+ENV UBUNTU_VERSION_NO_DOTS ubuntu1604
 ENV HOME /root
 ENV WORK_DIR /root
 ENV PATH $WORK_DIR/$SWIFT_SNAPSHOT-$UBUNTU_VERSION/usr/bin:$PATH

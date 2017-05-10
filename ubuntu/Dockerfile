@@ -14,11 +14,11 @@
 # limitations under the License.
 ##
 
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER IBM Swift Engineering at IBM Cloud
-LABEL Description="Hardened Ubuntu 14.04 image."
+LABEL Description="Hardened Ubuntu 16.04 image."
 
-# Security & hardening for Ubuntu 14.04
+# Security & hardening for Ubuntu 16.04
 # For details on resolving reported vulnerabilities, see:
 # - https://console.ng.bluemix.net/docs/containers/container_security_image.html#container_security_image
 # See following URLs for further details:
