@@ -39,17 +39,11 @@ WORKDIR ${WORK_DIR}
 RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y \
   build-essential \
   libc6-dev \
-  curl \
-  libedit-dev \
-  python2.7 \
-  python2.7-dev \
   libicu-dev \
   libssl-dev \
   libxml2 \
-  libcurl4-openssl-dev \
   pkg-config \
   clang-3.8 \
-  libxml2 \
   git \
   libpython2.7 \
   libicu-dev \
