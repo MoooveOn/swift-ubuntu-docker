@@ -46,7 +46,6 @@ RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y \
   clang-3.8 \
   git \
   libpython2.7 \
-  libicu-dev \
   wget \
   libcurl4-openssl-dev \
   vim \
